@@ -16,8 +16,19 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
         
-      - name: Hellow world
-        run: echo Hello world
+      - name: version MSBuild
+        run: MSBuild --version
+        
       - name: Build solution
         run: msbuild ./PhysicsGame.sln /p:Configuration=Release
+
+      - name: Create artifac directory
+        uses: 
+        run: mkdir artifact/PhysicsGame/
+
+      - name: Copy Executable to the artifact directory
+        run: copy /Build/PhysicsGame/Release/Win32/PhysicsGame.exe artifact/PhysicsGame/
+
+      - name: Upload artifact
+        run: msbuild 
   
