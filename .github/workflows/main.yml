@@ -1,0 +1,6 @@
+name: jorge
+
+on:
+  push:
+    branches:
+    - main/*
