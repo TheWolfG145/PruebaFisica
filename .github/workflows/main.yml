@@ -15,4 +15,7 @@ jobs:
         
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
+        
+      - name: Hellow world
+        run: echo Hello world
   
