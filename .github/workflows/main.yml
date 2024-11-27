@@ -18,4 +18,6 @@ jobs:
         
       - name: Hellow world
         run: echo Hello world
+      - name: Build solution
+        run: msbuild ./PhysicsGame.sln /p:Configuration=Release
   
