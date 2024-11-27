@@ -3,4 +3,16 @@ name: jorge
 on:
   push:
     branches:
-    - main/*
+    - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+  
